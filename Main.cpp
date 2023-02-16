@@ -1,30 +1,42 @@
  #include <iostream>
+using namespace std;
 
- using namespace std;
+int main() {
 
+  int student_score;
+  int pass_grade;
+  int merit_grade;
+  int distinction_grade;
 
-int main(){
+  cout << " Please enter the student score: ";
+  cin >> student_score;
 
-int student_score; 
-int passing_score = 100;
- 
- cout << " Enter Student Score: ";
- cin >> student_score;
+  pass_grade = (student_score >= 70 && student_score <= 85);
+  merit_grade = (student_score >= 86 && student_score <= 96);
+  distinction_grade = (student_score >= 96 && student_score <= 100);
 
+if (student_score < 0 || student_score > 100){
+  cout << "Invaid number.";
+  }
 
-bool result1 = (passing_score < 100);
-cout << "The result is: " << result1 << endl;
+  else if (student_score <= 69){
+    cout << "You have failed.";
+  }
 
+  else if (pass_grade = true){
+    cout  << "Congratulations you passed!";
+  }
+    
+  else if (merit_grade = true){
+    cout << "Merit achieved, good shit!";
+  }
 
-int marks_needed = passing_score - student_score;
-cout <<" Marks needed to pass: " << marks_needed;
-
-    return 0; 
-
-
-
-
+  else if (distinction_grade = true){
+  cout << "Highest grade, Distinction achieved!";
+    }
+  return 0;
 }
+
 
 
 
